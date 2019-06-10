@@ -23,6 +23,17 @@ module Enumerable
     #arr=[2,4,6,8,10,12]
     #arr.my_each_with_index{|x,i| puts "#{x},#{i}!"}
 
+    def my_select
+        selected=[]
+        self.my_each do |item|
+            yield(item) 
+            selected.push(item) if yield(item)
+        end  
+        selected
+    end
 end
+
+arr=[2,4,6,8,10,12]
+puts arr.my_select{|x| x > 6}
 
 
