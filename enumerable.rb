@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # The enumerable module contains the iterator methods.
 module Enumerable
   def my_each
@@ -84,7 +85,7 @@ module Enumerable
   def my_map(proc = nil)
     result = []
     if proc
-      my_each  {|current| result << proc.call(current)}
+      my_each { |current| result << proc.call(current) }
     elsif proc.nil? && block_given?
       my_each do |current|
         result << yield(current)
