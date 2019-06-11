@@ -1,3 +1,4 @@
+# Enumerable module contain the iterating methods.
 module Enumerable
     def my_each
         i = 0
@@ -82,9 +83,7 @@ module Enumerable
     def my_map(proc=nil)
         result = []
         if proc
-            self.my_each do |current|
-                result << proc.call(current)
-            end
+            self.my_each {|current|result << proc.call(current)}
         elsif proc.nil? && block_given?
             self.my_each do |current|
                 result << yield(current)
@@ -94,7 +93,6 @@ module Enumerable
     end
 
     def my_inject (initial = 0)
-        i = 0
         accumulator = initial
         self.my_each do |current|
             accumulator = yield(accumulator, current)
