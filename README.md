@@ -1,4 +1,4 @@
-# enumerable_methods Project
+# Enumerable_methods Project
 Creating a ruby module that contain the my_enumerable methods using ruby language.
 
 ## Prerequisite
