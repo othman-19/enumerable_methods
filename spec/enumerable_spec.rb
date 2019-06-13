@@ -83,21 +83,6 @@ RSpec.describe Enumerable do
       arr = %w[a r r a y]
       expect(arr.my_map { |x| x + x }).to eql(%w[aa rr rr aa yy])
     end
-    it 'if a parameter given, it return how many times that parameter \
-      exist in the array' do
-      arr = [2, 4, 2, 8, 10, 12]
-      expect(arr.my_count(2)).to eql(2)
-    end
-    it 'if a parameter given, it return how many times that parameter \
-      exist in the array' do
-      arr = [2, 4, 2, 8, 10, 12]
-      expect(arr.my_count(20)).to eql(0)
-    end
-    it 'if a block given, it return how many items that realize the block \
-      condition' do
-      arr = [2, 4, 3, 8, 10, 13]
-      expect(arr.my_count(&:even?)).to eql(4)
-    end
   end
   #=end
 
