@@ -78,18 +78,18 @@ RSpec.describe Enumerable do
 
   #=begin
   describe '#my_map' do
-    it 'it return a new array ,each item modified by the block from the \
-    origin method' do
+    it 'it return a new array ,each item modified by the block from \
+    the origin method' do
       arr = %w[a r r a y]
       expect(arr.my_map { |x| x + x }).to eql(%w[aa rr rr aa yy])
     end
-    it 'if a parameter given, it return how many times that parameter exist \
-      in the array' do
+    it 'if a parameter given, it return how many times that parameter \
+      exist in the array' do
       arr = [2, 4, 2, 8, 10, 12]
       expect(arr.my_count(2)).to eql(2)
     end
-    it 'if a parameter given, it return how many times that parameter exist \
-      in the array' do
+    it 'if a parameter given, it return how many times that parameter \
+      exist in the array' do
       arr = [2, 4, 2, 8, 10, 12]
       expect(arr.my_count(20)).to eql(0)
     end
