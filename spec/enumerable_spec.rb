@@ -15,8 +15,10 @@ RSpec.describe Enumerable do
     it 'return the original array' do
       arr = [2, 4, 6]
       result = []
-      expect(arr.my_each_with_index { |x, i| result.push("#{i} index \
-        of #{x}") }).to eql(arr)
+      expect(arr.my_each_with_index do |x, i|
+               result.push("#{i} index \
+                     of #{x}")
+             end).to eql(arr)
     end
   end
   #=end
