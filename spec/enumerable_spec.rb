@@ -39,8 +39,8 @@ RSpec.describe Enumerable do
 
   #=begin
   describe '#my_all?' do
-    let(:only_block1) { proc{ |x| x > 6 } }
-    let(:only_block2) { proc{ |x| x > 1 } }
+    let(:only_block1) { proc { |x| x > 6 } }
+    let(:only_block2) { proc { |x| x > 1 } }
     it 'return true only if all of the array items respond to the condition \
       in given block' do
       expect(arr1.all?(&only_block1)).to eql(false)
@@ -56,7 +56,7 @@ RSpec.describe Enumerable do
   describe '#my_count' do
     let(:arr2) { [2, 4, 2, 8, 10, 12] }
     let(:arr3) { [2, 4, 3, 8, 10, 13] }
-    let(:count_block) { proc{ |x| x.even? } }
+    let(:count_block) { proc { |x| x.even? } }
     it 'if no parameter given, it return the number of the array items' do
       expect(arr1.my_count).to eql(6)
     end
