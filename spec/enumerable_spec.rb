@@ -8,7 +8,7 @@ RSpec.describe Enumerable do
   #=begin
   describe '#my_each_with_index' do
     let(:arr) { [2, 4, 6] }
-    let (:result) { [] }
+    let(:result) { [] }
     it 'find each item with his index' do
       arr.my_each_with_index { |x, i| result.push("#{i} index of #{x}") }
       expect(result).to eql(['0 index of 2', '1 index of 4', '2 index of 6'])
