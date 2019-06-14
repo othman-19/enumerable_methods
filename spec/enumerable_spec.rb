@@ -26,7 +26,7 @@ RSpec.describe Enumerable do
 
   #=begin
   describe '#my_select' do
-    let(:selection_block){ arr1.my_select { |x| x > 6 } }
+    let(:selection_block) { arr1.my_select { |x| x > 6 } }
     it 'return a new array with asked condition in given block' do
       expect(selection_block).to eql([8, 10, 12])
     end
@@ -39,8 +39,8 @@ RSpec.describe Enumerable do
 
   #=begin
   describe '#my_all?' do
-    let(:only_block1){ arr1.all? { |x| x > 6 } }
-    let(:only_block2){ arr1.all? { |x| x > 1 } }
+    let(:only_block1) { arr1.all? { |x| x > 6 } }
+    let(:only_block2) { arr1.all? { |x| x > 1 } }
     it 'return true only if all of the array items respond to the condition \
       in given block' do
       expect(only_block1).to eql(false)
@@ -56,7 +56,7 @@ RSpec.describe Enumerable do
   describe '#my_count' do
     let(:arr2) { [2, 4, 2, 8, 10, 12] }
     let(:arr3) { [2, 4, 3, 8, 10, 13] }
-    let(:count_block){ arr3.my_count(&:even?) }
+    let(:count_block) { arr3.my_count(&:even?) }
     it 'if no parameter given, it return the number of the array items' do
       expect(arr1.my_count).to eql(6)
     end
@@ -80,7 +80,7 @@ RSpec.describe Enumerable do
   #=begin
   describe '#my_map' do
     let(:arr) { %w[a r r a y] }
-    let(:map_block){ arr.my_map { |x| x + x } }
+    let(:map_block) { arr.my_map { |x| x + x } }
     it 'it return a new array ,each item modified by the block from \
     the origin method' do
       expect(map_block).to eql(%w[aa rr rr aa yy])
@@ -91,8 +91,8 @@ RSpec.describe Enumerable do
   #=begin
   describe '#my_inject' do
     let(:arr) { [2, 4, 6, 8, 10] }
-    let(:inject_block1){ arr.my_inject(1) { |total, n| total * n } }
-    let(:inject_block2){ arr.my_inject(0) { |total, n| total + n } }
+    let(:inject_block1) { arr.my_inject(1) { |total, n| total * n } }
+    let(:inject_block2) { arr.my_inject(0) { |total, n| total + n } }
 
     it 'it return accumulated result after iterating the array items using \
       a block and an initial value' do
