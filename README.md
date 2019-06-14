@@ -13,6 +13,7 @@ Creating a ruby module that contain the my_enumerable methods using ruby languag
 3. Open the file `spec/enumerable_spec.rb` to edit the program.
 4. Enter `rspec` command in terminal to run the tests.
 5. Edit the program by changing the arrays or parameters in `#it` blocks or by adding other `#it` tests.
+6. You can delete the `#` before `=begin` and `=end` to desativate one or multiple method tests.
 
 ## Contributors
 1. [Othmane Naamani](https://github.com/othman-19).
